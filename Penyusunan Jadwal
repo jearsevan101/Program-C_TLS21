@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    
+    int jumlah;
+
+    cout<<"Selamat datang di program penyusunan jadwal (ง︡'-'︠)งn\n";
+    cout<<"Pada program ini anda dapat memasukan jadwal anda kemudian kami akan mengurutkannya untuk anda (＾▽＾)\n"; 
+    cout<<"Masukan jumlah kegiatan anda : "; 
+    cin>>jumlah;
+    
+    string kegiatan[jumlah];
+    string hari[jumlah];
+    string jam[jumlah];
+    
+    
+    
+    for(int i = 0; i<jumlah; i++)
+    {
+        cout<<"\nMasukan nama kegiatan ke-" <<i+1<< " anda : ";
+        cin>>kegiatan[i];
+        cout<<"\nMasukan hari kegiatan ke-" <<i+1<< " : ";
+        cin>>hari[i];
+        cout<<"\nMasukan jam kegiatan ke-" <<i+1<< " : ";
+        cin>>jam[i];
+    }
+    
+    cout<<"\nAGENDA ANDA\n";
+    cout<<"Hari\t\twaktu\t\tkegiatan\n";
+    cout<<"---------------------------------------------\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "senin")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "selasa")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "rabu")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "kamis")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "jumat")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "sabtu")
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i]<<"\n";
+    for(int i = 0; i<jumlah; i++)
+        if(hari[i] == "minggu") 
+            cout<<hari[i]<<"\t\t"<<jam[i]<<"\t\t"<<kegiatan[i];
+    
+    return 0;
+}
+
